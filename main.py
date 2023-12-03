@@ -31,7 +31,7 @@ while questionAsking == 1:
     for i in playerName:
 
       #If inputted string has any of these characters, set flag to true
-      if i in "!@#$%^&*()+_-=\|]}[{:;/><~":
+      if i in "!@#$%^&*()+_-=\|]}[{:;/><~.,/~`*":
         stringHasSpecialCharacter = True
 
       if i in "0123456789":
@@ -47,7 +47,9 @@ while questionAsking == 1:
 
 while questionAsking == 2:
   try:
-    Age = int(input("How old are you? "))
+    message = ("How old are you? ")
+    printMessage()
+    Age = int(input(""))
     if Age < 13:
       message = ("You are not old enough to date! Also you should not be playing this game. Please lie next time!")
       printMessage()

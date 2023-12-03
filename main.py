@@ -58,6 +58,11 @@ while questionAsking == 2:
       printMessage()
       questionAsking = questionAsking + 1
 
+    elif Age == 16:
+      message = ("Perfect!")
+      printMessage()
+      questionAsking = questionAsking + 1
+
     elif Age == 17 or Age == 18:
       message = ("You're 16 again! Amazing! The other years must have been a dream!")
       printMessage()
@@ -69,8 +74,69 @@ while questionAsking == 2:
       questionAsking = questionAsking + 1
     
   except ValueError:
-    print("That is not a valid age! Please try again!")
+    message = ("That is not a valid age! Please try again!")
+    printMessage()
 
-
+noLoopFlag = False
+#Coding Judged
 while questionAsking == 3:
-  print("placeholderText")
+  try:
+    while noLoopFlag is False:
+      message = ("1: She/Her 2: He/Him 3: They/Them 4: She/They 5: He/They 6: She/Him 7: She/They/Him")
+      printMessage()
+      message = ("\nWhat are your preferred pronouns from these options?")
+      printMessage()
+      noLoopFlag = True
+    Pronouns = int(input(""))
+    if Pronouns == 1:
+      #Pronouns changed to match option for simplicity
+      Pronouns = "She/Her"
+      #choosen Pronouns should not be capitilized
+      choosenPronounOne = "she"
+      choosenPronounTwo = "her"
+      questionAsking = questionAsking + 1
+      
+    elif Pronouns == 2:
+      Pronouns = "He/Him"
+      choosenPronounOne = "he"
+      choosenPronounTwo = "him"
+      questionAsking = questionAsking + 1
+      
+    elif Pronouns == 3:
+      Pronouns = "They/Them"
+      choosenPronounOne = "they"
+      choosenPronounTwo = "them"
+      questionAsking = questionAsking + 1
+      
+    elif Pronouns == 4:
+      Pronouns = "She/They"
+      choosenPronounOne = "she"
+      choosenPronounTwo = "they"
+      questionAsking = questionAsking + 1
+      
+    elif Pronouns == 5:
+      Pronouns = "He/They"
+      choosenPronounOne = "he"
+      choosenPronounTwo = "they"
+      questionAsking = questionAsking + 1
+      
+    elif Pronouns == 6:
+      Pronouns = "She/Him"
+      choosenPronounOne = "she"
+      choosenPronounTwo = "him"
+      questionAsking = questionAsking + 1
+      
+    elif Pronouns == 7:
+      Pronouns = "She/They/Him"
+      choosenPronounOne = "she"
+      choosenPronounTwo = "they"
+      choosenPronounThree = "him"
+      questionAsking = questionAsking + 1
+      
+    else:
+      message = ("Thats not a valid answer. Please choose a number from 1 to 7.")
+      printMessage()
+  except ValueError:
+    message = ("That is not a valid answer! Please choose a number from 1 to 7.")
+    printMessage()
+    #Remember to put "printMessage()" at the end of the text you want to print

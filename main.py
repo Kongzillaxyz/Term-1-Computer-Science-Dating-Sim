@@ -1,6 +1,5 @@
 import shutil
 import textwrap
-import time
 
 #Up the questionAsking by 1 for each question, and set it to 0 when no longer using.
 questionAsking = 1
@@ -31,7 +30,7 @@ while questionAsking == 1:
     for i in playerName:
 
       #If inputted string has any of these characters, set flag to true
-      if i in "!@#$%^&*()+_-=\|]}[{:;/><~.,/~`*":
+      if i in "!@#$%^&*()+_-=\\|]}[{:;/><~.,/~`*":
         stringHasSpecialCharacter = True
 
       if i in "0123456789":
@@ -175,4 +174,46 @@ while questionAsking == 4:
     printMessage()
 
 noLoopFlag = False
-  
+
+message = ("What club would you join if you had the chance? This definitely will not come up later.")
+printMessage()
+while questionAsking == 5:
+  try:
+    while noLoopFlag is False:
+      message = ("Your options are...\n")
+      printMessage()
+      message = ("1. Theater\n")
+      printMessage()
+      message = ("2. Writing\n")
+      printMessage()
+      message = ("3. Art\n")
+      printMessage()
+      message = ("4. Photography")
+      printMessage()
+      message = ("5. Chess")
+      printMessage()
+      noLoopFlag = True
+    Club = int(input(""))
+    if Club == 1:
+      Club = "theater"
+      questionAsking = questionAsking + 1
+    elif Club == 2:
+      Club = "writing"
+      questionAsking = questionAsking + 1
+    elif Club == 3:
+      Club = "art"
+      questionAsking = questionAsking + 1
+    elif Club == 4:
+      Club = "photography"
+      questionAsking = questionAsking + 1
+    elif Club == 5:
+      Club = "chess"
+      questionAsking = questionAsking + 1
+    else:
+      message = ("Thats not a valid answer. Please choose a number from 1 to 5.")
+      printMessage()
+      
+  except ValueError:
+    message = ("That is not a valid answer! Please choose a number from 1 to 5.")
+    printMessage()
+      

@@ -74,7 +74,7 @@ while questionAsking == 2:
       message = ("Too bad! You're in High School again! Welcome back to 16 years old!")
       printMessage()
       questionAsking = questionAsking + 1
-    
+
   except ValueError:
     message = ("That is not a valid age! Please try again!")
     printMessage()
@@ -97,44 +97,44 @@ while questionAsking == 3:
       choosenPronounOne = "she"
       choosenPronounTwo = "her"
       questionAsking = questionAsking + 1
-      
+
     elif Pronouns == 2:
       Pronouns = "He/Him"
       choosenPronounOne = "he"
       choosenPronounTwo = "him"
       questionAsking = questionAsking + 1
-      
+
     elif Pronouns == 3:
       Pronouns = "They/Them"
       choosenPronounOne = "they"
       choosenPronounTwo = "them"
       questionAsking = questionAsking + 1
-      
+
     elif Pronouns == 4:
       Pronouns = "She/They"
       choosenPronounOne = "she"
       choosenPronounTwo = "they"
       questionAsking = questionAsking + 1
-      
+
     elif Pronouns == 5:
       Pronouns = "He/They"
       choosenPronounOne = "he"
       choosenPronounTwo = "they"
       questionAsking = questionAsking + 1
-      
+
     elif Pronouns == 6:
       Pronouns = "She/Him"
       choosenPronounOne = "she"
       choosenPronounTwo = "him"
       questionAsking = questionAsking + 1
-      
+
     elif Pronouns == 7:
       Pronouns = "She/They/Him"
       choosenPronounOne = "she"
       choosenPronounTwo = "they"
       choosenPronounThree = "him"
       questionAsking = questionAsking + 1
-      
+
     else:
       message = ("Thats not a valid answer. Please choose a number from 1 to 7.")
       printMessage()
@@ -142,3 +142,37 @@ while questionAsking == 3:
     message = ("That is not a valid answer! Please choose a number from 1 to 7.")
     printMessage()
     #Remember to put "printMessage()" at the end of the text you want to print
+
+    #while writing, use choosenPronounOne when you would say "She", "He", or "They"
+    #Then use choosenPronounTwo when you would say "Her", "Him", or "Them"
+noLoopFlag = False
+while questionAsking == 4:
+  try:
+    while noLoopFlag is False:
+      message = ("Great! Now, please choose your gender preference from the following options\n")
+      printMessage()
+      message = ("1. Male  2. Female  3. Nonbinary  4. No Preference ")
+      printMessage()
+      noLoopFlag = True
+    genderPreference = int(input(""))
+    if genderPreference == 1:
+      genderPreference = "male"
+      questionAsking = questionAsking + 1
+    elif genderPreference == 2:
+      genderPreference = "female"
+      questionAsking = questionAsking + 1
+    elif genderPreference == 3:
+      genderPreference = "nonbinary"
+      questionAsking = questionAsking + 1
+    elif genderPreference == 4:
+      genderPreference = "no preference"
+      questionAsking = questionAsking + 1
+    else:
+      message = ("Thats not a valid answer. Please choose a number from 1 to 4.")
+      printMessage()
+  except ValueError:
+    message = ("That is not a valid answer! Please choose a number from 1 to 4.")
+    printMessage()
+
+noLoopFlag = False
+  

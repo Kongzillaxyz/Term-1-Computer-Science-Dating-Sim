@@ -217,3 +217,61 @@ while questionAsking == 5:
     message = ("That is not a valid answer! Please choose a number from 1 to 5.")
     printMessage()
       
+ColorCheck = False
+
+message = ("What color is your favorite from this list? ")
+printMessage()
+while questionAsking == 6:
+  try:
+    while ColorCheck is False:
+      message = ("Your options are...\n")
+      printMessage()
+      message = ("1. Red\n")
+      printMessage()
+      message = ("2. Orange\n")
+      printMessage()
+      message = ("3. Yellow\n")
+      printMessage()
+      message = ("4. Green\n")
+      printMessage()
+      message = ("5. Blue\n")
+      printMessage()
+      message = ("6. Purple\n")
+      printMessage()
+      message = ("7. Pink")
+      printMessage()
+      message = ("8. Turquoise")
+      printMessage()
+      ColorCheck = True
+    Color = int(input(""))
+    if Color == 1:
+      Color = "Red"
+      questionAsking = questionAsking + 1
+    elif Color == 2:
+      Color = "Orange"
+      questionAsking = questionAsking + 1
+    elif Color == 3:
+      Color = "Yellow"
+      questionAsking = questionAsking + 1
+    elif Color == 4:
+      Color = "Green"
+      questionAsking = questionAsking + 1
+    elif Color == 5:
+      Color = "Blue"
+      questionAsking = questionAsking + 1
+    elif Color == 6:
+      Color = "Purple"
+      questionAsking = questionAsking + 1
+    elif Color == 7:
+      Color = "Pink"
+      questionAsking = questionAsking + 1
+    elif Color == 8:
+      Color = "Turquoise"
+      questionAsking = questionAsking + 1
+    else:
+      message = ("Thats not a valid answer. Please choose a number from 1 to 8.")
+      printMessage()
+
+  except ValueError:
+    message = ("That is not a valid answer! Please choose a number from 1 to 8.")
+    printMessage()

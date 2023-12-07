@@ -140,8 +140,6 @@ while questionAsking == 3:
   except ValueError:
     message = ("That is not a valid answer! Please choose a number from 1 to 7.")
     printMessage()
-    #Remember to put "printMessage()" at the end of the text you want to print
-
     #while writing, use choosenPronounOne when you would say "She", "He", or "They"
     #Then use choosenPronounTwo when you would say "Her", "Him", or "Them"
 noLoopFlag = False
@@ -150,7 +148,7 @@ while questionAsking == 4:
     while noLoopFlag is False:
       message = ("Great! Now, please choose your gender preference from the following options\n")
       printMessage()
-      message = ("1. Male  2. Female  3. Nonbinary  4. No Preference ")
+      message = ("1. Male  2. Female  3. Nonbinary  4. No Preference")
       printMessage()
       noLoopFlag = True
     genderPreference = int(input(""))
@@ -216,14 +214,14 @@ while questionAsking == 5:
   except ValueError:
     message = ("That is not a valid answer! Please choose a number from 1 to 5.")
     printMessage()
-      
-ColorCheck = False
+
+noLoopFlag = False
 
 message = ("What color is your favorite from this list? ")
 printMessage()
 while questionAsking == 6:
   try:
-    while ColorCheck is False:
+    while noLoopFlag is False:
       message = ("Your options are...\n")
       printMessage()
       message = ("1. Red\n")
@@ -238,35 +236,35 @@ while questionAsking == 6:
       printMessage()
       message = ("6. Purple\n")
       printMessage()
-      message = ("7. Pink")
+      message = ("7. Pink\n")
       printMessage()
       message = ("8. Turquoise")
       printMessage()
-      ColorCheck = True
+      noLoopFlag = True
     Color = int(input(""))
     if Color == 1:
-      Color = "Red"
+      Color = "red"
       questionAsking = questionAsking + 1
     elif Color == 2:
-      Color = "Orange"
+      Color = "orange"
       questionAsking = questionAsking + 1
     elif Color == 3:
-      Color = "Yellow"
+      Color = "yellow"
       questionAsking = questionAsking + 1
     elif Color == 4:
-      Color = "Green"
+      Color = "green"
       questionAsking = questionAsking + 1
     elif Color == 5:
-      Color = "Blue"
+      Color = "blue"
       questionAsking = questionAsking + 1
     elif Color == 6:
-      Color = "Purple"
+      Color = "purple"
       questionAsking = questionAsking + 1
     elif Color == 7:
-      Color = "Pink"
+      Color = "pink"
       questionAsking = questionAsking + 1
     elif Color == 8:
-      Color = "Turquoise"
+      Color = "turquoise"
       questionAsking = questionAsking + 1
     else:
       message = ("Thats not a valid answer. Please choose a number from 1 to 8.")
